@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ridders_postcode>
+            <general>
+                <is_active>0</is_active>
+                <mockup>
+                    <use_mockup_data>0</use_mockup_data>
+                    <status>200</status>
+                    <country_code>NL</country_code>
+                    <province>Noord-Holland</province>
+                    <city>Alkmaar</city>
+                    <postcode>1823 BT</postcode>
+                    <street>De Friese Poort</street>
+                    <house_number>106</house_number>
+                    <house_number_addition/>
+                </mockup>
+                <postcodenl>
+                    <app_key/>
+                    <app_secret/>
+                </postcodenl>
+                <postcodeapinu>
+                    <api_key/>
+                </postcodeapinu>
+            </general>
+        </ridders_postcode>
+    </default>
+</config>

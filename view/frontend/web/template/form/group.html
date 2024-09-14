@@ -1,0 +1,27 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<fieldset id="ridders-postcode-fieldset" class="field postcode-check fieldset" data-bind="css: additionalClasses, visible: isVisible()"
+    data-bind="blockLoader: isLoading">
+    <div class="control">
+    <!-- ko foreach: { data: elems, as: 'element' } -->
+        <!-- ko if: element.visible() -->
+            <!-- ko template: element.template --><!-- /ko -->
+        <!-- /ko -->
+    <!-- /ko -->
+    </div>
+    <div role="alert" class="message warning alert alert-warning" data-bind="visible: (validationMessage() && validationMessage().length > 0)" generated="true">
+        <span data-bind="text: validationMessage()" />
+    </div>
+    <div role="alert" class="message danger alert alert-danger" data-bind="visible: (notFoundMessage() && notFoundMessage().length > 0)" generated="true">
+        <span data-bind="text: notFoundMessage()" />
+    </div>
+    <div data-role="loader" class="loading-mask" data-bind="visible: isLoading">
+        <div class="loader">
+            <img data-bind="attr:{src: loaderImageHref }" alt="Loading...">
+        </div>
+    </div>
+</fieldset>

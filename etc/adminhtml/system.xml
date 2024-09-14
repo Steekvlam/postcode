@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="ridders_postcode" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000" translate="label">
+            <label>Postcode API</label>
+            <tab>ridders</tab>
+            <resource>Ridders_Postcode::config</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>general</label>
+                <field id="is_active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Is Active</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_customer_page" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Active on Customer Edit Page</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_register_page" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Active on Register Page</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <group id="ridders_api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                    <label>Ridders API</label>
+                    <field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                        <label>API Key</label>
+                        <comment/>
+                    </field>
+                </group>
+                <group id="ridders_api_v2" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="15" translate="label">
+                    <label>Ridders API V2</label>
+                    <field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                        <label>API Key</label>
+                        <comment/>
+                    </field>
+                </group>
+                <group id="postcodenl" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+                    <label>Postcode.nl</label>
+                    <field id="app_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                        <label>App Key</label>
+                        <comment/>
+                    </field>
+                    <field id="app_secret" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                        <label>App Secret</label>
+                        <comment/>
+                    </field>
+                </group>
+                <group id="postcodeapinu" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
+                    <label>PostcodeAPI.nu</label>
+                    <field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                        <label>API key</label>
+                        <comment/>
+                    </field>
+                </group>
+                <group id="mockup" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+                    <label>Mockup Data</label>
+                    <field id="use_mockup_data" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+                        <label>Use Mockup Data</label>
+                        <comment/>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="32" translate="label" type="text">
+                        <label>Status</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="postcode" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="33" translate="label" type="text">
+                        <label>Postcode</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="country_code" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="34" translate="label" type="text">
+                        <label>Country Code</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="province" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="36" translate="label" type="text">
+                        <label>Province</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="city" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="38" translate="label" type="text">
+                        <label>City</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="street" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Street</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="house_number" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="42" translate="label" type="text">
+                        <label>House Number</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                    <field id="house_number_addition" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="44" translate="label" type="text">
+                        <label>House Number Addition</label>
+                        <comment/>
+                        <depends>
+                            <field id="use_mockup_data">1</field>
+                        </depends>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

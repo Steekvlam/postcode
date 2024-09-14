@@ -1,0 +1,37 @@
+
+<script type="text/html" id="postcode-check-template">
+    <fieldset class="field postcode-check">
+        <div class="control">
+            <div class="field postcode required">
+                <label for=""><?= $escaper->escapeHtml(__('Postcode')); ?></label>
+                <div class="control">
+                    <input type="text" class="input-text" name="ridders_postcode_postcode"<?php if ($block->getAddress()) : ?> value="<?= $escaper->escapeHtmlAttr($block->getAddress()->getPostcode()) ?>"<?php endif;?>>
+                </div>
+            </div>
+
+            <div class="field housenumber required">
+                <label for=""><?= $escaper->escapeHtml(__('Housenumber')); ?></label>
+                <div class="control">
+                    <input type="text" class="input-text" name="ridders_postcode_housenumber" value="<?= $escaper->escapeHtmlAttr($block->getStreetLine(2)) ?>">
+                </div>
+            </div>
+
+            <div class="field additional">
+                <label for=""><?= $escaper->escapeHtml(__('Additional')); ?></label>
+                <div class="control">
+                    <input type="text" class="input-text" name="ridders_postcode_addition" value="<?= $escaper->escapeHtmlAttr($block->getStreetLine(3)) ?>">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</script>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "ridders_postcode": {
+            "postCodes": <?= /* @noEscape */ $block->getPostCodeConfig()->getSerializedPostCodes() ?>
+        }
+    }
+}
+</script>
